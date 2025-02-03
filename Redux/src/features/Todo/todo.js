@@ -22,7 +22,7 @@ export const todoSlice = createSlice({
             state.todos = state.todos.filter((todo) => todo != action.payload)
         },
         markAsDone : (state,action) => {
-            state.todos.map ((todo) => {
+            state.todo = state.todos.map ((todo) => {
                 if(todo.id === action.payload) {
                     todo.isDone = true;
                 }
