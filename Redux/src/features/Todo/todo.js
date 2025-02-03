@@ -16,7 +16,7 @@ export const todoSlice = createSlice({
                 task : action.payload,
                 isDone : false,
             }
-            state.todos;
+            state.todos.push(newTodo);
         }
     }
 });
