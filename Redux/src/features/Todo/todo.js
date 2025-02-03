@@ -17,6 +17,9 @@ export const todoSlice = createSlice({
                 isDone : false,
             }
             state.todos.push(newTodo);
+        },
+        deleteTodo : (state,action) => {
+            state.todos = state.todos.filter((todo) => todo != action.payload)
         }
     }
 });
