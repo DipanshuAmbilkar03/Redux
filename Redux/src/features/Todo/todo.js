@@ -9,4 +9,14 @@ export const todoSlice = createSlice({
     initialState : {
         value : 0,
     },
+    reducers : {
+        addTodo : (state,action) => {
+            const newTodo = {
+                id : 123,
+                task : action.payload,
+                isDone : false,
+            }
+            state.todos;
+        }
+    }
 });
