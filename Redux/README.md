@@ -1,8 +1,28 @@
-# React + Vite
+# 🌀 Redux - Scalable State Container for JavaScript Apps  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Redux is a **predictable state container** designed for **scalable, immutable, and deterministic** state management. It leverages **unidirectional data flow**, a **single immutable state tree**, and **pure function reducers** to facilitate predictable application behavior, time-travel debugging, and efficient UI rendering via **memoized selectors**.  
 
-Currently, two official plugins are available:
+## 🔥 Core Concepts  
+### 1️⃣ **Single Source of Truth**  
+- The entire application state is stored in a **normalized, immutable state tree** within a single store.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 2️⃣ **State is Read-Only**  
+- State mutations are prohibited—only **pure reducer functions** can compute the next state based on dispatched actions.  
+
+### 3️⃣ **Reducers Must Be Pure Functions**  
+- Reducers are **side-effect-free** functions that deterministically return a new state based on the previous state and an action payload.  
+
+## 🔥 Architectural Flow  
+
+### graph TD
+  - UI -->|dispatch(action)| Store;
+  - Store -->|state update| Reducer;
+  - Reducer -->|new state| Store;
+  - Store -->|subscribe()| UI;
+
+---
+
+## 🚀 Installation  
+```sh
+npm install redux
+
