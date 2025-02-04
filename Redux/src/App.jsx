@@ -1,5 +1,6 @@
 import './App.css'
 import Todo from './components/todo'
+import AppForm from "./components/AddFrom"
 import { Provider } from 'react-redux'
 import { store } from './app/store'
 
